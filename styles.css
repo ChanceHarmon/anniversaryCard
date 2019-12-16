@@ -1,100 +1,45 @@
-  /* This loads an external font.  In this case, two fonts - 'Dancing Script' which is a cursive font, and 'Open Sans' 
-			They are loaded from the google fonts.  If you want to find your own fonts go to https://fonts.google.com  Once you find
-			a font you like, click the red + to add it, then click the menu at the bottom to get the embed code.  If you click "@import" 
-			it will give you the code to copy/paste as below  */
+
       @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans');
 
-      /* Set the styles for the HTML tag with id="greeting_card"  When # is used before a name, it means 
-        ID.  If a "." is used, that means a class name - so anything with class='name' */
       #greeting_card {
   
-        /* The margin is the space outside of the element.  You can combine them all to look like
-          margin: 32px auto 32px auto; but I prefer have it expanded for easier understanding. */
         margin-top: 32px;
         margin-bottom: 32px;
-  
-        /* When the left and right are set to AUTO that will center the item on the page. */
         margin-left: auto;
         margin-right: auto;
-  
-        /* The width defines how wide the card will be.  If a % is provided, it is based on the width of the tag it is part of.  */
         width: 75%;
-        /* Max-width will set a maximum width.  This prevents the card from getting too wide. */
         max-width: 720px;
-  
-        /* Box shadow defines a drop-shadow effect around the entire card (a border that makes it look 3d)  The first 4 numbers
-          are the sizes of the border, and the last is an RGBA value which stands for Red, Green, Blue, Alpha.  the first 3 numbers 
-          are from 0-255 which define the colors values for the amount of Red, Green, and Blue.  The Alpha is how transparent it should be. 
-          The value goes from 0-1, 1 = 100%, 0 = 0% */
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  
-        /* Transition defines the amount of time it should take for values to take effect when they change.  Below is a hover effect.
-          Without a transition time, the new styles would immediately take into effect, but because the transition was provided,
-          it will ease-in to the new values. */
         transition: 0.3s;
       }
-  
-      /* The :hover effect will apply when you mouse over the item.  If it's on a phone or tablet, it may display if the user puts their 
-        finger lightly on the object, but it may act differently on different devices. */
       #greeting_card:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       }
-  
-  
-      /* When you have two selectors next to each other, that means 'within'  So in this case, styles are being applied to 
-        any element with the class of 'image_caption_text' that are within the item with id="greeting_card" */
       #greeting_card .image_caption_text {
-        /* This defines the font.  There are two defined here, the second is a fall-back in case the 'Dancing Script' doesn't load.  */
         font-family: "Dancing Script", cursive;
-  
-        /* The Position, Top, and Right, define how the element should show up.  This text will display at the bottom right.
-          You can define a top, bottom, left, or right.  Whatever measurement you provide after will be in reference to the direction.
-          In this example, it's 10 pixels from the bottom, and 10 pixels from the right. */
         position: absolute;
         bottom: 10px;
         right: 10px;
-  
-        /* Color defines the text color.  If you want */
         color: rgb(180, 0, 0);
-  
-        /* Font-size and font-weight define how large you want the text and how thick you want it.  
-          You can use numbers for font-weight (100 = very thin, 700 = very thick) or you can use words.  Normal = 300, bold = 600 */
         font-size: 36px;
         font-weight: bold;
-        /* Text shadow is a shadow that appears behind the text to make it easier to read.  The first 2 numbers are the offset -
-          how far away from the original text it should be, and the last is an RGBA color - the Red, Green, Blue, and Alpha values */
         text-shadow: 2px 2px rgba(255, 255, 255, .3);
       }
-  
-      /* Define the styles for the actual image that appears */
       #greeting_card .image img {
         width: 100%;
       }
-  
-      /* The card is split in half.  For the absolute positioning of the 'image_caption_text' class to work, it's parent
-        element needs to have position:relative; For now, you just need to know that this needs to be here to work.
-        You can experiment with commenting it out and seeing what happens. */
       #greeting_card .top_half {
         position: relative;
       }
-  
-      /* Define how the text in the bottom half of the card should look.  I kept it very simple, but you could add a color or any 
-        other styles */
       #greeting_card .bottom_half {
         font-family: "Open Sans";
         padding: 12px;
       }
-  
-      /* Define how the bottom half P tags will be styled */
       #greeting_card .bottom_half p {
         text-indent: 24px;
       }
-  
-      /* Define how the signature at the bottom will be styled */
       #greeting_card .signature {
         font-family: "Dancing Script";
-        /* The text-align allows you to define left, right, center, or justify.  This is exactly the same as text-alignment
-          in a word processor */
         text-align: right;
         font-size: 24px;
       }
